@@ -31,6 +31,9 @@ rules:
     # 2) Студенты — только решают и завершают, без показа ответов/оценки.
     - permissions:
         [view, submit_answer, end_session, cannot_see_flow_result]
+  
+  grade_identifier: ptma1
+  grade_aggregation_strategy: max_grade
         
 groups:
 - id: ptma1
