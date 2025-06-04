@@ -1,0 +1,466 @@
+# MITRE ATT&CK Enterprise for RELATE
+# Save this file (e.g. flows/mitre-attack-exam.yml) in your course repository.
+
+title: "Зачёт по MITRE ATT&CK Enterprise"
+description: |
+    # Зачёт по MITRE ATT&CK Enterprise
+
+    В каждом из 32 вопросов необходимо выбрать **один** правильный ответ.  
+    В скобках указаны оригинальные (англоязычные) названия тактик и техник.
+
+rules:
+    start:
+    - may_start_new_session: true
+      may_list_existing_sessions: true
+
+groups:
+- id: ptma1
+  pages:
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q01
+    title: "Вопрос 1"
+    value: 1
+    shuffle: true
+    prompt: |
+        Что такое MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)?
+    choices:
+    - Инструмент для сканирования уязвимостей в сети
+    - База данных известных вредоносных программ
+    - ~CORRECT~ **Общедоступная база знаний о тактиках и техниках атак злоумышленников (Adversarial Tactics, Techniques, and Common Knowledge)**
+    - Платформа для управления политиками безопасности
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q02
+    title: "Вопрос 2"
+    value: 1
+    shuffle: true
+    prompt: |
+        ATT&CK — это аббревиатура от чего?
+    choices:
+    - Advanced Threat Training and Credential Knowledge
+    - ~CORRECT~ **Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK)**
+    - Automated Threat Tracking and Collaboration Kit
+    - Advanced Tools for Threat Coordination and Knowledge
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q03
+    title: "Вопрос 3"
+    value: 1
+    shuffle: true
+    prompt: |
+        Приём «Фишинговое вложение» (Spear-phishing Attachment) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - Доступ к учётным данным (Credential Access)
+    - ~CORRECT~ **Начальный доступ (Initial Access)**
+    - Исполнение (Execution)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q04
+    title: "Вопрос 4"
+    value: 1
+    shuffle: true
+    prompt: |
+        «Заражение на лету» (Drive-by Compromise) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - ~CORRECT~ **Начальный доступ (Initial Access)**
+    - Боковое перемещение (Lateral Movement)
+    - Обнаружение (Discovery)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q05
+    title: "Вопрос 5"
+    value: 1
+    shuffle: true
+    prompt: |
+        Запуск вредоносного скрипта через PowerShell (PowerShell) — это техника какой тактики?
+    choices:
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Исполнение (Execution)**
+    - Уклонение от защиты (Defense Evasion)
+    - Доступ к учётным данным (Credential Access)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q06
+    title: "Вопрос 6"
+    value: 1
+    shuffle: true
+    prompt: |
+        Добавление программы в автозагрузку Windows (Registry Run Keys / Startup Folder) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Устойчивость (Persistence)**
+    - Обнаружение (Discovery)
+    - Исполнение (Execution)
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q07
+    title: "Вопрос 7"
+    value: 1
+    shuffle: true
+    prompt: |
+        Создание новой учётной записи администратора (Create Account) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Устойчивость (Persistence)**
+    - Исполнение (Execution)
+    - Повышение привилегий (Privilege Escalation)
+    - Уклонение от защиты (Defense Evasion)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q08
+    title: "Вопрос 8"
+    value: 1
+    shuffle: true
+    prompt: |
+        Подбор пароля (Brute Force) относится к какой тактике?
+    choices:
+    - Обнаружение (Discovery)
+    - ~CORRECT~ **Доступ к учётным данным (Credential Access)**
+    - Исполнение (Execution)
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q09
+    title: "Вопрос 9"
+    value: 1
+    shuffle: true
+    prompt: |
+        Извлечение хешей паролей из памяти (OS Credential Dumping) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - Уклонение от защиты (Defense Evasion)
+    - ~CORRECT~ **Доступ к учётным данным (Credential Access)**
+    - Воздействие (Impact)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q10
+    title: "Вопрос 10"
+    value: 1
+    shuffle: true
+    prompt: |
+        Эксплойт уязвимости ОС для повышения прав (Privilege Escalation) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - ~CORRECT~ **Повышение привилегий (Privilege Escalation)**
+    - Начальный доступ (Initial Access)
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q11
+    title: "Вопрос 11"
+    value: 1
+    shuffle: true
+    prompt: |
+        Обход контроля UAC (Bypass User Account Control) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Повышение привилегий (Privilege Escalation)**
+    - Доступ к учётным данным (Credential Access)
+    - Исполнение (Execution)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q12
+    title: "Вопрос 12"
+    value: 1
+    shuffle: true
+    prompt: |
+        Обфускация или шифрование кода (Obfuscated/Stored Files) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - Повышение привилегий (Privilege Escalation)
+    - ~CORRECT~ **Уклонение от защиты (Defense Evasion)**
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q13
+    title: "Вопрос 13"
+    value: 1
+    shuffle: true
+    prompt: |
+        Отключение антивируса (Disable Security Tools) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Уклонение от защиты (Defense Evasion)**
+    - Командование и управление (Command and Control)
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q14
+    title: "Вопрос 14"
+    value: 1
+    shuffle: true
+    prompt: |
+        Инъекция кода в процесс (Process Injection) чаще всего используется для какой тактики?
+    choices:
+    - Исполнение (Execution)
+    - ~CORRECT~ **Уклонение от защиты (Defense Evasion)**
+    - Боковое перемещение (Lateral Movement)
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q15
+    title: "Вопрос 15"
+    value: 1
+    shuffle: true
+    prompt: |
+        Вывод списка запущенных процессов (Process Discovery) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Обнаружение (Discovery)**
+    - Сбор (Collection)
+    - Исполнение (Execution)
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q16
+    title: "Вопрос 16"
+    value: 1
+    shuffle: true
+    prompt: |
+        Сканирование сети для поиска активных устройств (Network Service Discovery) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Обнаружение (Discovery)**
+    - Боковое перемещение (Lateral Movement)
+    - Начальный доступ (Initial Access)
+    - Исполнение (Execution)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q17
+    title: "Вопрос 17"
+    value: 1
+    shuffle: true
+    prompt: |
+        Подключение к другому компьютеру по RDP (Remote Services) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Боковое перемещение (Lateral Movement)**
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q18
+    title: "Вопрос 18"
+    value: 1
+    shuffle: true
+    prompt: |
+        Использование утилиты PsExec для удалённого запуска процессов (Remote Service Execution) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Боковое перемещение (Lateral Movement)**
+    - Уклонение от защиты (Defense Evasion)
+    - Исполнение (Execution)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q19
+    title: "Вопрос 19"
+    value: 1
+    shuffle: true
+    prompt: |
+        Метод Pass-the-Hash (Pass the Hash) чаще используется для какой тактики?
+    choices:
+    - Доступ к учётным данным (Credential Access)
+    - ~CORRECT~ **Боковое перемещение (Lateral Movement)**
+    - Обнаружение (Discovery)
+    - Исполнение (Execution)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q20
+    title: "Вопрос 20"
+    value: 1
+    shuffle: true
+    prompt: |
+        Захват изображения экрана пользователя (Screen Capture) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Сбор (Collection)**
+    - Обнаружение (Discovery)
+    - Исполнение (Execution)
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q21
+    title: "Вопрос 21"
+    value: 1
+    shuffle: true
+    prompt: |
+        Сохранение содержимого буфера обмена (Clipboard Data) относится к какой тактике?
+    choices:
+    - Обнаружение (Discovery)
+    - Исполнение (Execution)
+    - ~CORRECT~ **Сбор (Collection)**
+    - Устойчивость (Persistence)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q22
+    title: "Вопрос 22"
+    value: 1
+    shuffle: true
+    prompt: |
+        Связь с командным сервером через IRC-канал (IRC Channel C2) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - Сбор (Collection)
+    - ~CORRECT~ **Командование и управление (Command and Control)**
+    - Боковое перемещение (Lateral Movement)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q23
+    title: "Вопрос 23"
+    value: 1
+    shuffle: true
+    prompt: |
+        Передача команд через DNS-запросы (DNS Tunneling) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Командование и управление (Command and Control)**
+    - Экспфильтрация (Exfiltration)
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q24
+    title: "Вопрос 24"
+    value: 1
+    shuffle: true
+    prompt: |
+        Отправка конфиденциальных данных через HTTP POST (Exfiltration over Web Services) относится к какой тактике?
+    choices:
+    - Сбор (Collection)
+    - Командование и управление (Command and Control)
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Экспфильтрация (Exfiltration)**
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q25
+    title: "Вопрос 25"
+    value: 1
+    shuffle: true
+    prompt: |
+        Запись данных на USB-носитель (Exfiltration to Removable Media) относится к какой тактике?
+    choices:
+    - Сбор (Collection)
+    - Устойчивость (Persistence)
+    - ~CORRECT~ **Экспфильтрация (Exfiltration)**
+    - Обнаружение (Discovery)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q26
+    title: "Вопрос 26"
+    value: 1
+    shuffle: true
+    prompt: |
+        Создание инфраструктуры злоумышленника (Develop Infrastructure) относится к какой тактике?
+    choices:
+    - ~CORRECT~ **Развитие ресурсов (Resource Development)**
+    - Исполнение (Execution)
+    - Начальный доступ (Initial Access)
+    - Экспфильтрация (Exfiltration)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q27
+    title: "Вопрос 27"
+    value: 1
+    shuffle: true
+    prompt: |
+        Поиск информации о цели в открытых источниках (Search Open Web) относится к какой тактике?
+    choices:
+    - Устойчивость (Persistence)
+    - Обнаружение (Discovery)
+    - ~CORRECT~ **Разведка (Reconnaissance)**
+    - Повышение привилегий (Privilege Escalation)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q28
+    title: "Вопрос 28"
+    value: 1
+    shuffle: true
+    prompt: |
+        Исполняемый макрос в Office-документе (Office Application Startup) относится к какой тактике?
+    choices:
+    - Начальный доступ (Initial Access)
+    - ~CORRECT~ **Исполнение (Execution)**
+    - Устойчивость (Persistence)
+    - Сбор (Collection)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q29
+    title: "Вопрос 29"
+    value: 1
+    shuffle: true
+    prompt: |
+        Шифрование данных с требованием выкупа (Encrypt Data) относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - Уклонение от защиты (Defense Evasion)
+    - ~CORRECT~ **Воздействие (Impact)**
+    - Экспфильтрация (Exfiltration)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q30
+    title: "Вопрос 30"
+    value: 1
+    shuffle: true
+    prompt: |
+        Полное уничтожение файлов на диске жертвы (Destroy Data) относится к какой тактике?
+    choices:
+    - Экспфильтрация (Exfiltration)
+    - Устойчивость (Persistence)
+    - Уклонение от защиты (Defense Evasion)
+    - ~CORRECT~ **Воздействие (Impact)**
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q31
+    title: "Вопрос 31"
+    value: 1
+    shuffle: true
+    prompt: |
+        Прослушивание сетевого трафика для перехвата учётных данных (Packet Capture) относится к какой тактике?
+    choices:
+    - Обнаружение (Discovery)
+    - ~CORRECT~ **Доступ к учётным данным (Credential Access)**
+    - Командование и управление (Command and Control)
+    - Устойчивость (Persistence)
+
+  # ---------------------------------------------------------------------------
+  - type: ChoiceQuestion
+    id: q32
+    title: "Вопрос 32"
+    value: 1
+    shuffle: true
+    prompt: |
+        Добавление задачи в планировщик Windows (Scheduled Task/Job) для автоматического запуска вредоносного кода относится к какой тактике?
+    choices:
+    - Исполнение (Execution)
+    - ~CORRECT~ **Устойчивость (Persistence)**
+    - Доступ к учётным данным (Credential Access)
+    - Воздействие (Impact)
