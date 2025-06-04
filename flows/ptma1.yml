@@ -9,10 +9,29 @@ description: |
     В скобках указаны оригинальные (англоязычные) названия тактик и техник.
 
 rules:
-    start:
-    - may_start_new_session: true
+  # --- кто и когда может открыть экзамен ---------------------------
+  start:
+    - if_before: end_exam          # событие календаря «конец экзамена»
+      if_has_role: [student, ta, instructor]
+      if_has_fewer_sessions_than: 1
+      may_start_new_session: true
       may_list_existing_sessions: true
 
+    - may_start_new_session: false
+      may_list_existing_sessions: true
+
+  # --- какие права получает пользователь в открытой сессии ---------
+  access:
+    # 1) Преподаватели и ассистенты видят всё.
+    - if_has_role: [instructor, ta]
+      permissions:
+        [view, submit_answer, end_session,
+         see_correctness, see_answer_after_submission]
+
+    # 2) Студенты — только решают и завершают, без показа ответов/оценки.
+    - permissions:
+        [view, submit_answer, end_session, cannot_see_flow_result]
+        
 groups:
 - id: ptma1
   pages:
