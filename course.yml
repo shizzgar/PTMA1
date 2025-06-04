@@ -13,7 +13,7 @@ chunks:
         weight: 0
 
     content: |
-    
+
         Welcome to the MITRE att&ck course
 
 
@@ -26,4 +26,4 @@ chunks:
 
         # Welcome to the computer-based testing facility!
 
-        <a href="flow:mitre-attack" class="btn btn-secondary">Start exam &raquo;</a>
+        <a href="flow:ptma1" class="btn btn-secondary">Start exam &raquo;</a>
