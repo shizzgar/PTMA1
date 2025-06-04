@@ -34,6 +34,13 @@ rules:
   
   grade_identifier: ptma1
   grade_aggregation_strategy: max_grade
+  grading:
+    # ❶  НЕ сдал: <20 баллов
+    - if_session_points_between: [0, 19]   # 0 … 19 включительно
+      credit_percent: 0
+
+    # ❷  Сдал: 20 баллов и выше
+    - credit_percent: 100
         
 groups:
 - id: ptma1
